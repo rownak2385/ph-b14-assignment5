@@ -37,14 +37,14 @@ function Footer() {
     <footer id="contact" className="border-t border-slate-100 bg-white">
       <div className="mx-auto max-w-[82rem] px-6 lg:px-8">
         <div className="grid gap-10 py-12 sm:grid-cols-2 sm:py-14 lg:grid-cols-[2fr_repeat(3,minmax(0,1fr))] lg:gap-16 lg:py-16">
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div className="text-center sm:col-span-2 lg:col-span-1 lg:text-left">
             <a href="#home" className="inline-block" aria-label="Dev Stack home">
               <img src={logo} alt="Dev Stack" className="h-8 w-auto" />
             </a>
             <p className="mt-4 max-w-sm text-sm leading-6 text-slate-500">
               Curated tools, technologies, and resources for developers building modern software.
             </p>
-            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2" aria-label="Social links">
+            <div className="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 lg:justify-start" aria-label="Social links">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
@@ -60,7 +60,7 @@ function Footer() {
           </div>
 
           {footerNavigation.map((group) => (
-            <nav key={group.title} aria-label={`${group.title} links`}>
+            <nav key={group.title} className="hidden md:block" aria-label={`${group.title} links`}>
               <h2 className="text-xs font-bold uppercase tracking-wide text-slate-900">
                 {group.title}
               </h2>
@@ -80,7 +80,7 @@ function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col gap-4 border-t border-slate-100 py-8 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center justify-between gap-3 border-t border-slate-100 py-6 text-[9px] text-slate-400 sm:py-8 sm:text-xs">
           <p>© 2026 Dev Stack. All rights reserved.</p>
           <div className="flex items-center gap-8">
             <a href="#privacy-policy" className="transition-colors hover:text-pink-500">

@@ -6,12 +6,12 @@ function StackSidebar({ selectedStack, removeFromStack, removeAllStack }) {
       : `${selectedCount} ${selectedCount === 1 ? 'Technology' : 'Technologies'} Selected`
 
   return (
-    <aside className="w-full rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_4px_16px_rgba(15,23,42,0.035)] lg:sticky lg:top-24 lg:w-[16.5rem] xl:w-72">
+    <aside className="w-full rounded-xl border border-slate-200 bg-white p-4 shadow-[0_4px_16px_rgba(15,23,42,0.035)] md:rounded-2xl md:p-6 lg:sticky lg:top-24 lg:w-[16.5rem] xl:w-72">
       <h2 className="text-lg font-bold text-slate-900">Your Stack</h2>
       <p className="mt-0.5 text-xs text-slate-400">{selectionLabel}</p>
 
       {selectedCount === 0 ? (
-        <div className="mt-5 grid min-h-20 place-items-center rounded-xl border border-dashed border-slate-200 bg-slate-50/30 px-5 py-5 text-center text-xs text-slate-400">
+        <div className="mt-4 grid min-h-16 place-items-center rounded-xl border border-dashed border-slate-200 bg-slate-50/30 px-4 py-4 text-center text-xs text-slate-400 md:mt-5 md:min-h-20 md:px-5 md:py-5">
           Your stack is empty.
         </div>
       ) : (

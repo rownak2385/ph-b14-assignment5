@@ -37,6 +37,17 @@ select {
   background-image: var(--brand-gradient);
 }
 
+.technology-card-selected {
+  border-color: transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    var(--brand-gradient) border-box;
+  box-shadow:
+    -6px 0 18px rgba(249, 115, 22, 0.16),
+    0 6px 22px rgba(236, 72, 153, 0.18),
+    6px 0 18px rgba(139, 92, 246, 0.16);
+}
+
 footer > div > div:last-child {
   padding-bottom: 1.25rem;
 }

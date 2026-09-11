@@ -56,13 +56,13 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <section id="technologies" className="scroll-mt-20 bg-white pb-20 sm:pb-24">
+        <section id="technologies" className="scroll-mt-20 bg-slate-50/40 pb-20 md:bg-white sm:pb-24">
           <div className="mx-auto max-w-[82rem] px-6 lg:px-8">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+            <div className="text-center md:text-left">
+              <h2 className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-4xl">
                 Explore the <span className="brand-gradient-text">Technologies</span>
               </h2>
-              <p className="mt-2 text-base text-slate-500">
+              <p className="mt-1.5 text-xs text-slate-500 md:text-base">
                 Pick one technology per category to build your ideal stack.
               </p>
             </div>
@@ -95,7 +95,7 @@ function App() {
         </section>
       </main>
       <Footer />
-      <ToastContainer position="top-right" autoClose={2500} closeOnClick pauseOnHover />
+      <ToastContainer position="bottom-right" autoClose={2500} closeOnClick pauseOnHover />
     </div>
   )
 }

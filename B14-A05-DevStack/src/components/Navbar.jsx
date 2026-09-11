@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import logo from '../../assets/logo-text.png'
 
 const navigationLinks = [
@@ -36,6 +37,8 @@ function AccountActions({ compact = false }) {
 }
 
 function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white">
       <nav
@@ -66,8 +69,11 @@ function Navbar() {
         <div className="grid w-full grid-cols-[auto_1fr_auto] items-center gap-2 md:hidden">
           <button
             type="button"
-            className="grid size-9 place-items-center rounded-lg text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-violet-600"
-            aria-label="Open navigation menu"
+            onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
+            className="grid size-9 cursor-pointer place-items-center rounded-lg text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-violet-600"
+            aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-controls="mobile-navigation"
+            aria-expanded={isMobileMenuOpen}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +85,11 @@ function Navbar() {
               aria-hidden="true"
               className="size-5"
             >
-              <path d="M4 6h16M4 12h16M4 18h16" />
+              {isMobileMenuOpen ? (
+                <path d="M6 6l12 12M18 6 6 18" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
             </svg>
           </button>
 
@@ -90,6 +100,29 @@ function Navbar() {
           <AccountActions compact />
         </div>
       </nav>
+
+      {isMobileMenuOpen && (
+        <div
+          id="mobile-navigation"
+          className="absolute inset-x-0 top-full border-t border-slate-100 bg-white shadow-lg md:hidden"
+        >
+          <div className="mx-auto max-w-[82rem] space-y-1 px-3 py-3 sm:px-6">
+            {navigationLinks.map(({ label, href, isActive }) => (
+              <a
+                key={label}
+                href={href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-current={isActive ? 'page' : undefined}
+                className={`block rounded-lg px-4 py-2.5 text-sm font-medium leading-5 transition-colors hover:bg-slate-50 hover:text-violet-600 ${
+                  isActive ? 'brand-gradient-text font-semibold' : 'text-zinc-600'
+                }`}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   )
 }
