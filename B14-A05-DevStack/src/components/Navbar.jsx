@@ -1,3 +1,5 @@
+import logo from '../../assets/logo-text.png'
+
 const navigationLinks = [
   { label: 'Home', href: '#home', isActive: true },
   { label: 'Technologies', href: '#technologies' },
@@ -8,13 +10,8 @@ const navigationLinks = [
 
 function Brand() {
   return (
-    <a href="#home" className="flex shrink-0 items-center gap-2" aria-label="Dev Stack home">
-      <span className="brand-gradient-bg grid size-9 place-items-center rounded-xl text-sm font-bold text-white shadow-sm">
-        DS
-      </span>
-      <span className="whitespace-nowrap text-base font-bold tracking-tight text-zinc-900 sm:text-lg">
-        Dev Stack
-      </span>
+    <a href="#home" className="shrink-0" aria-label="Dev Stack home">
+      <img src={logo} alt="Dev Stack" className="h-8 w-auto md:h-9" />
     </a>
   )
 }
@@ -30,7 +27,7 @@ function AccountActions({ compact = false }) {
       </button>
       <button
         type="button"
-        className={`${compact ? 'px-2.5 text-xs sm:px-4 sm:text-sm' : 'px-5 text-sm'} brand-gradient-bg rounded-full py-2 font-semibold text-white shadow-sm transition-opacity hover:opacity-90`}
+        className={`${compact ? 'px-2.5 py-2 text-xs sm:px-4 sm:text-sm' : 'px-5 py-2.5 text-sm'} brand-gradient-bg rounded-full font-semibold text-white transition-opacity hover:opacity-90`}
       >
         Sign Up
       </button>
@@ -40,9 +37,9 @@ function AccountActions({ compact = false }) {
 
 function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white">
+    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white">
       <nav
-        className="mx-auto flex h-16 max-w-7xl items-center px-3 sm:px-6 lg:px-8"
+        className="mx-auto flex h-16 max-w-7xl items-center px-3 sm:px-6 md:h-20 lg:px-8"
         aria-label="Main navigation"
       >
         <div className="hidden w-full items-center justify-between md:flex">
