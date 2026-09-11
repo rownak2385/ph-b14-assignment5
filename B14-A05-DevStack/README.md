@@ -2,6 +2,7 @@
 
 Dev Stack Builder is a responsive React application where developers can explore popular technologies and build a personalized development stack for their projects.
 
+
 ## Features
 
 - Explore 15 technologies across frontend, backend, database, language, styling, DevOps, and tools categories.
@@ -127,3 +128,7 @@ Md. Rownak Hasan
 ## Repository
 
 [https://github.com/rownak2385/ph-b14-assignment5](https://github.com/rownak2385/ph-b14-assignment5)
+
+## Live Demo
+
+[View Dev Stack Builder](https://rh-dev-stack.vercel.app/)
