@@ -31,3 +31,7 @@ select {
   background-image: var(--brand-gradient);
   background-clip: text;
 }
+
+.brand-gradient-bg {
+  background-image: var(--brand-gradient);
+}
