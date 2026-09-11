@@ -24,7 +24,7 @@ button,
 input,
 textarea,
 select {
-  font: inherit;
+  font-family: inherit;
 }
 
 .brand-gradient-text {
@@ -35,4 +35,8 @@ select {
 
 .brand-gradient-bg {
   background-image: var(--brand-gradient);
+}
+
+footer > div > div:last-child {
+  padding-bottom: 1.25rem;
 }

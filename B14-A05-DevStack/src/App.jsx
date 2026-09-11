@@ -56,8 +56,8 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <section id="technologies" className="bg-white pb-24 sm:pb-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section id="technologies" className="scroll-mt-20 bg-white pb-20 sm:pb-24">
+          <div className="mx-auto max-w-[82rem] px-6 lg:px-8">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
                 Explore the <span className="brand-gradient-text">Technologies</span>
@@ -67,7 +67,7 @@ function App() {
               </p>
             </div>
 
-            <div className="mt-10 grid gap-6 xl:grid-cols-[minmax(0,1fr)_18rem] xl:items-start">
+            <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,1fr)_16.5rem] lg:items-start xl:grid-cols-[minmax(0,1fr)_18rem]">
               {loading ? (
                 <div
                   className="grid min-h-72 place-items-center rounded-2xl border border-slate-200 bg-white"

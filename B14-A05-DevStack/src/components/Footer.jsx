@@ -35,8 +35,8 @@ const footerNavigation = [
 function Footer() {
   return (
     <footer id="contact" className="border-t border-slate-100 bg-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-10 py-14 sm:grid-cols-2 sm:py-16 lg:grid-cols-[2fr_repeat(3,minmax(0,1fr))] lg:gap-16">
+      <div className="mx-auto max-w-[82rem] px-6 lg:px-8">
+        <div className="grid gap-10 py-12 sm:grid-cols-2 sm:py-14 lg:grid-cols-[2fr_repeat(3,minmax(0,1fr))] lg:gap-16 lg:py-16">
           <div className="sm:col-span-2 lg:col-span-1">
             <a href="#home" className="inline-block" aria-label="Dev Stack home">
               <img src={logo} alt="Dev Stack" className="h-8 w-auto" />

@@ -21,13 +21,13 @@ function AccountActions({ compact = false }) {
     <div className="flex shrink-0 items-center gap-1 sm:gap-2">
       <button
         type="button"
-        className={`${compact ? 'px-1.5 text-xs sm:px-2 sm:text-sm' : 'px-3 text-sm'} rounded-full py-2 font-semibold text-zinc-700 transition-colors hover:text-violet-600`}
+        className={`${compact ? 'px-1.5 text-xs sm:px-2 sm:text-sm' : 'px-3 text-sm'} appearance-none cursor-pointer rounded-full py-2 font-medium leading-5 text-zinc-700 transition-colors hover:text-violet-600`}
       >
         Sign In
       </button>
       <button
         type="button"
-        className={`${compact ? 'px-2.5 py-2 text-xs sm:px-4 sm:text-sm' : 'px-5 py-2.5 text-sm'} brand-gradient-bg rounded-full font-semibold text-white transition-opacity hover:opacity-90`}
+        className={`${compact ? 'px-2.5 py-2 text-xs sm:px-4 sm:text-sm' : 'px-5 py-2.5 text-sm'} brand-gradient-bg appearance-none cursor-pointer rounded-full font-medium leading-5 text-white transition-opacity hover:opacity-90`}
       >
         Sign Up
       </button>
@@ -39,7 +39,7 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white">
       <nav
-        className="mx-auto flex h-16 max-w-7xl items-center px-3 sm:px-6 md:h-20 lg:px-8"
+        className="mx-auto flex h-16 max-w-[82rem] items-center px-3 sm:px-6 md:h-20 lg:px-8"
         aria-label="Main navigation"
       >
         <div className="hidden w-full items-center justify-between md:flex">
@@ -51,7 +51,7 @@ function Navbar() {
                 key={label}
                 href={href}
                 aria-current={isActive ? 'page' : undefined}
-                className={`text-sm font-medium transition-colors hover:text-violet-600 ${
+                className={`text-sm font-medium leading-5 transition-colors hover:text-violet-600 ${
                   isActive ? 'brand-gradient-text font-semibold' : 'text-zinc-600'
                 }`}
               >
