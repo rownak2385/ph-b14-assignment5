@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: #18181b;
+  background-color: #fafafa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --brand-gradient: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.brand-gradient-text {
+  color: transparent;
+  background-image: var(--brand-gradient);
+  background-clip: text;
+}
