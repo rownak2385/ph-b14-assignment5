@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Footer from './components/Footer.jsx'
 import Hero from './components/Hero.jsx'
 import Navbar from './components/Navbar.jsx'
 import StackSidebar from './components/StackSidebar.jsx'
@@ -93,6 +94,7 @@ function App() {
           </div>
         </section>
       </main>
+      <Footer />
       <ToastContainer position="top-right" autoClose={2500} closeOnClick pauseOnHover />
     </div>
   )
