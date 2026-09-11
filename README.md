@@ -26,7 +26,7 @@ Dev Stack Builder is a responsive React application where developers can explore
 ## Project Structure
 
 ```text
-B14-A05-DevStack/
+ph-b14-assignment5/
 ├── assets/
 │   ├── banner-stack.png
 │   └── logo-text.png
@@ -59,10 +59,10 @@ The `components` folder contains reusable interface components, while `data` sto
    git clone https://github.com/rownak2385/ph-b14-assignment5.git
    ```
 
-2. Enter the React project folder:
+2. Enter the repository folder:
 
    ```bash
-   cd ph-b14-assignment5/B14-A05-DevStack
+   cd ph-b14-assignment5
    ```
 
 3. Install the dependencies:
